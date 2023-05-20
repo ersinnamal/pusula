@@ -29,24 +29,16 @@ const setPusula = async () => {
     pusula.votes[0] += 1;
   }
 
-  const totalVotes = pusula.votes[0] + pusula.votes[1];
+  const totalVotes = pusula.votes.reduce((sum, v) => v + sum, 0);
   prev = {
     adays: [...pusula.adays],
-    votes: [pusula.votes[0] / totalVotes, pusula.votes[1] / totalVotes],
+    votes: pusula.votes.map((v) => v / totalVotes),
   };
 
-  const newPusula = {
-    adays: pusula.adays.map((aday) => aday._id),
-    votes: pusula.votes,
-  };
-
-  console.log(newPusula);
-  const a = await Pusula.create({
+  Pusula.create({
     adays: pusula.adays.map((aday) => aday._id),
     votes: pusula.votes,
   });
-
-  console.log(a);
 
   let newAday;
   do {

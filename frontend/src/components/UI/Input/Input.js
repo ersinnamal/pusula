@@ -15,7 +15,6 @@ const Input = (props) => {
       </label>
       <input
         onClick={() => {
-          console.log(123);
           setIsFocused(true);
         }}
         onBlur={() => setIsFocused(false)}

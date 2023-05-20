@@ -10,8 +10,6 @@ const Timer = (props) => {
     }
   }, [props]);
 
-  console.log(props);
-
   let style;
 
   if (props.status === "start") {
