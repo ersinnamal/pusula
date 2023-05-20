@@ -1,0 +1,25 @@
+.timerContainer {
+  border: 1px solid black;
+  width: 100%;
+  border-bottom: none;
+}
+
+.timerFill {
+  height: 1.6rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(121, 121, 121),
+    rgb(37, 37, 37)
+  );
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fillAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

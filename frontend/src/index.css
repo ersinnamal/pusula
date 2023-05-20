@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans";
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
