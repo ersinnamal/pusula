@@ -2,7 +2,7 @@ const { default: mongoose } = require("mongoose");
 const app = require("./src/app");
 const dotenv = require("dotenv");
 
-dotenv.config();
+dotenv.config({ path: "config.env" });
 
 mongoose.connect(process.env.MONGODB_STRING, () =>
   console.log("DB connection established...")

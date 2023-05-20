@@ -25,7 +25,6 @@ const Pusula = () => {
       setData(body);
       setAdays(body.prev.adays);
       setStatus("results");
-      console.log(data);
       setTimeout(
         () => {
           setIsActive(true);
