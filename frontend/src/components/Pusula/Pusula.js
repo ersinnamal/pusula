@@ -4,11 +4,15 @@ import Timer from "../Timer/Timer";
 import classes from "./Pusula.module.css";
 
 const Pusula = () => {
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState(null);
   const [isActive, setIsActive] = useState(true);
   const [status, setStatus] = useState();
   const [adays, setAdays] = useState();
   const [data, setData] = useState(false);
+  const [isFirstTime, setIsFirstTime] = useState(true);
+
+  const host =
+    process.env.NODE_ENV === "development" ? "http://localhost:8000" : "";
 
   const resetPusula = useCallback(() => {
     setSelected(null);
@@ -16,13 +20,22 @@ const Pusula = () => {
   }, []);
 
   useEffect(() => {
-    if (isActive) return setAdays(data.adays);
+    if (isActive && data) return setAdays(data.adays);
     if (status === "results") return;
 
     const fetchPusula = async () => {
-      const r = await fetch("/pusula");
+      const r = await fetch(host + "/pusula");
       const body = await r.json();
       setData(body);
+
+      if (isFirstTime) {
+        setStatus("active");
+        setIsActive(true);
+        setAdays(body.adays);
+        setIsFirstTime(false);
+        return;
+      }
+
       setAdays(body.prev.adays);
       setStatus("results");
       setTimeout(
@@ -34,7 +47,7 @@ const Pusula = () => {
       );
     };
     fetchPusula();
-  }, [isActive, data, status]);
+  }, [isActive, data, status, isFirstTime]);
 
   const handleTimeout = useCallback(() => {
     resetPusula();
@@ -42,7 +55,7 @@ const Pusula = () => {
 
   useEffect(() => {
     const sendVote = async () => {
-      await fetch("/pusula", {
+      await fetch(host + "/pusula", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ vote: selected }),
@@ -54,15 +67,15 @@ const Pusula = () => {
   return (
     <div className={classes.container}>
       <Timer
-        status={isActive ? "start" : "pause"}
-        target={isActive ? Math.ceil(data.remainingTime / 1000) : 0}
+        status={isActive && data ? "start" : "pause"}
+        target={isActive && data ? Math.ceil(data.remainingTime / 1000) : 0}
         onTimeout={handleTimeout}
       />
       <div className={classes.pusula}>
         {[0, 1].map((i) => (
           <Aday
             key={i}
-            vote={!isActive ? data.prev?.votes[i] : null}
+            vote={!isActive && data.prev ? data.prev.votes[i] : null}
             selected={selected === i}
             disabled={selected !== null}
             data={data && adays[i]}

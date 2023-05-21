@@ -14,7 +14,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "start": "HOST_BASE=http://localhost:8000 react-scripts start"
   },
   "eslintConfig": {
     "extends": [
