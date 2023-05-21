@@ -4,3 +4,20 @@
   flex-direction: column;
   gap: 2.4rem;
 }
+
+.submitButton {
+  margin-top: 1.8rem;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #505050;
+  background-color: rgb(243, 243, 243);
+  transition: all 100ms;
+}
+
+.submitButton:hover,
+.submitButton:disabled {
+  background-color: #bebebe;
+  color: black;
+}
