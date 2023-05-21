@@ -8,8 +8,8 @@ Demo is available at: <a href="https://pusula.fun">pusula.fun</a>
 
 ### VOTE
 
-<p><img width="555" src="https://github.com/ersinnamal/pusula/assets/vote.gif" /></p>
+<p><img width="555" src="https://raw.githubusercontent.com/ersinnamal/pusula/main/assets/vote.gif" /></p>
 
 ### ADD A CANDIDATE
 
-<p><img width="555" src="https://github.com/ersinnamal/pusula/assets/add_a_candidate.gif" /></p>
+<p><img width="555" src="https://raw.githubusercontent.com/ersinnamal/pusula/main/assets/add_a_candidate.gif" /></p>
