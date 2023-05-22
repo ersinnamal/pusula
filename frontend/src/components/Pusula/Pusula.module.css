@@ -21,6 +21,9 @@
 
 @media (max-width: 400px) {
   .pusula {
-    padding: 0.8rem;
+    width: 100%;
+    padding: 2.4rem 0.8rem;
+    gap: 0px;
+    justify-content: space-between;
   }
 }

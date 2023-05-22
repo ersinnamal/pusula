@@ -9,3 +9,10 @@
   border-radius: 7px;
   overflow: hidden;
 }
+
+@media (max-width: 400px) {
+  .container {
+    margin: 2rem auto;
+    width: 95%;
+  }
+}
