@@ -7,6 +7,9 @@ const Input = (props) => {
   return (
     <div className={classes.inputContainer}>
       <label
+        onClick={() => {
+          setIsFocused(true);
+        }}
         className={`${classes.label} ${
           isFocused || props.value ? classes.labelFocused : ""
         }`}
