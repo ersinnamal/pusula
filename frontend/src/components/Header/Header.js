@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <NavLink to="/">
@@ -14,7 +14,7 @@ const Header = () => {
             `${classes.navLink} ${isActive && classes.active}`
           }
         >
-          Aday Ekle
+          ADAY EKLE
         </NavLink>
         <NavLink
           to="/iletisim"

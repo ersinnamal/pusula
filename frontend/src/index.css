@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap");
 
+:root {
+  --gray-0: #f8f9fa;
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #495057;
+  --gray-8: #343a40;
+  --gray-9: #212529;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,7 +32,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #f8f9fa;
+  background-color: #f1f3f5;
 }
 
 @media (max-width: 400px) {

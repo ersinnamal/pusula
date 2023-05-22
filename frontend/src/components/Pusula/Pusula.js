@@ -1,7 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import Aday from "../Aday/Aday";
+import Container from "../UI/Container/Container";
 import Timer from "../Timer/Timer";
 import classes from "./Pusula.module.css";
+
+const host =
+  process.env.NODE_ENV === "development" ? "http://localhost:8000" : "";
 
 const Pusula = () => {
   const [selected, setSelected] = useState(null);
@@ -10,9 +14,6 @@ const Pusula = () => {
   const [adays, setAdays] = useState();
   const [data, setData] = useState(false);
   const [isFirstTime, setIsFirstTime] = useState(true);
-
-  const host =
-    process.env.NODE_ENV === "development" ? "http://localhost:8000" : "";
 
   const resetPusula = useCallback(() => {
     setSelected(null);
@@ -65,7 +66,7 @@ const Pusula = () => {
   }, [selected]);
 
   return (
-    <div className={classes.container}>
+    <Container>
       <Timer
         status={isActive && data ? "start" : "pause"}
         target={isActive && data ? Math.ceil(data.remainingTime / 1000) : 0}
@@ -83,7 +84,7 @@ const Pusula = () => {
           ></Aday>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 

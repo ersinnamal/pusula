@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import useInput from "../../hooks/useInput";
 import Input from "../UI/Input/Input";
 import classes from "./AdayForm.module.css";
@@ -29,7 +29,7 @@ const AdayForm = (props) => {
       lastName: lNameValue,
       image: imgValue,
     };
-    const r = await fetch(host + "/aday", {
+    await fetch(host + "/aday", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
