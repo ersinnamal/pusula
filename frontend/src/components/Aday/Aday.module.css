@@ -12,7 +12,7 @@
 .blurred .imgContainer,
 .blurred .nameContainer {
   animation: blurAnimation;
-  animation-duration: 2000ms;
+  animation-duration: 1000ms;
 }
 
 .imgContainer {
@@ -42,9 +42,10 @@
 }
 
 .votePercentage span {
+  color: var(--gray-9);
   margin-bottom: 10px;
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
 }
 
 .imgLoading {
