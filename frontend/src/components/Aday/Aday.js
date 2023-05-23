@@ -36,7 +36,8 @@ const Aday = (props) => {
             </div>
 
             <img
-              src={props.data.image}
+              className={props.data.image === "" ? classes.emptyImg : ""}
+              src={props.data.image || null}
               alt={
                 props.data.image
                   ? `${props.data.firstName} ${props.data.lastName} resim`
