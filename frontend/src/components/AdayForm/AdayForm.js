@@ -56,9 +56,9 @@ const AdayForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit} className={classes.adayForm}>
-      <Input label="Resim (url)" {...imgInputHook} />
-      <Input label="Ad" {...fNameInputHook} />
-      <Input label="Soyad" {...lNameInputHook} />
+      <Input name="resim" label="Resim (url)" {...imgInputHook} />
+      <Input name="ad" label="Ad" {...fNameInputHook} />
+      <Input name="soyad" label="Soyad" {...lNameInputHook} />
       <button disabled={isButtonDisabled} className={classes.submitButton}>
         {buttonText}
       </button>

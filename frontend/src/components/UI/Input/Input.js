@@ -10,6 +10,7 @@ const Input = (props) => {
         onClick={() => {
           setIsFocused(true);
         }}
+        htmlFor={props.name}
         className={`${classes.label} ${
           isFocused || props.value ? classes.labelFocused : ""
         }`}
@@ -17,6 +18,7 @@ const Input = (props) => {
         {props.label}
       </label>
       <input
+        id={props.name}
         onClick={() => {
           setIsFocused(true);
         }}

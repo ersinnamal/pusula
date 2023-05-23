@@ -3,6 +3,7 @@ import Aday from "../Aday/Aday";
 import AdayForm from "../AdayForm/AdayForm";
 import Container from "../UI/Container/Container";
 import classes from "./AdayEkle.module.css";
+import Line from "../UI/Line/Line";
 
 const AdayEkle = () => {
   const [aday, setAday] = useState({});
@@ -16,6 +17,7 @@ const AdayEkle = () => {
       <div className={classes.container}>
         <Aday data={aday} vote={null} selected={true} disabled={true} />
         <AdayForm handleChange={handleChange} />
+        <Line vertical={true} />
       </div>
     </Container>
   );

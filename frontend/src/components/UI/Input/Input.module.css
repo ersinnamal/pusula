@@ -3,6 +3,7 @@
   border-bottom: 1px solid black;
   padding: 0.2rem 0.4rem;
   background-color: transparent;
+  box-shadow: 0 2px 2px var(--gray-3);
 }
 
 .input:focus-visible {
