@@ -7,9 +7,6 @@ const Input = (props) => {
   return (
     <div className={classes.inputContainer}>
       <label
-        onClick={() => {
-          setIsFocused(true);
-        }}
         htmlFor={props.name}
         className={`${classes.label} ${
           isFocused || props.value ? classes.labelFocused : ""
@@ -19,9 +16,7 @@ const Input = (props) => {
       </label>
       <input
         id={props.name}
-        onClick={() => {
-          setIsFocused(true);
-        }}
+        onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         onChange={props.onChange}
         value={props.value}
