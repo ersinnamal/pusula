@@ -110,7 +110,7 @@
 }
 
 @media (max-width: 400px) {
-  .container {
+  .adayContainer {
     padding: 1rem 2.4rem;
   }
   .imgContainer img {
@@ -130,7 +130,6 @@
     font-weight: 600;
     font-size: 1.6rem;
   }
-
   .evetStamp {
     font-family: "Rubik Dirt", cursive;
     color: red;

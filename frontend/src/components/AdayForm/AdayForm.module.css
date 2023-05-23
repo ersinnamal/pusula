@@ -21,3 +21,9 @@
   background-color: #bebebe;
   color: black;
 }
+
+@media (max-width: 400px) {
+  .adayForm {
+    padding: 1rem 2.4rem;
+  }
+}
