@@ -16,14 +16,14 @@ const Header = (props) => {
         >
           ADAY EKLE
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/iletisim"
           className={({ isActive }) =>
             `${classes.navLink} ${isActive && classes.active}`
           }
         >
           İletişim
-        </NavLink>
+        </NavLink> */}
       </nav>
     </header>
   );

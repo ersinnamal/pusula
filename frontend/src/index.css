@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&display=swap");
 
 :root {
   --gray-0: #f8f9fa;
@@ -32,7 +32,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #f1f3f5;
+  background-color: var(--gray-3);
 }
 
 @media (max-width: 400px) {
