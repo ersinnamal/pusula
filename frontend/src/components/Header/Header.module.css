@@ -38,11 +38,15 @@ nav {
   }
 
   nav {
-    display: none;
+    /* display: none; */
+  }
+
+  .navLink {
+    font-size: 1.4rem;
   }
 
   .header {
-    padding: 0.6rem;
-    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    justify-content: space-between;
   }
 }
