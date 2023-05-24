@@ -16,8 +16,8 @@ const AdayEkle = () => {
     <Container>
       <div className={classes.container}>
         <Aday data={aday} vote={null} selected={true} disabled={true} />
-        <AdayForm handleChange={handleChange} />
         <Line vertical={true} />
+        <AdayForm handleChange={handleChange} />
       </div>
     </Container>
   );

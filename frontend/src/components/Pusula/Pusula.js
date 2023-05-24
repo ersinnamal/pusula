@@ -3,6 +3,7 @@ import Aday from "../Aday/Aday";
 import Container from "../UI/Container/Container";
 import Timer from "../Timer/Timer";
 import classes from "./Pusula.module.css";
+import Line from "../UI/Line/Line";
 
 const host =
   process.env.NODE_ENV === "development" ? "http://localhost:8000" : "";
@@ -74,14 +75,17 @@ const Pusula = () => {
       />
       <div className={classes.pusula}>
         {[0, 1].map((i) => (
-          <Aday
-            key={i}
-            vote={!isActive && data.prev ? data.prev.votes[i] : null}
-            selected={selected === i}
-            disabled={selected !== null}
-            data={data && adays[i]}
-            handleSelect={setSelected.bind(null, i)}
-          ></Aday>
+          <>
+            <Aday
+              key={i}
+              vote={!isActive && data.prev ? data.prev.votes[i] : null}
+              selected={selected === i}
+              disabled={selected !== null}
+              data={data && adays[i]}
+              handleSelect={setSelected.bind(null, i)}
+            ></Aday>
+            {i === 0 && <Line vertical={true} />}
+          </>
         ))}
       </div>
     </Container>
