@@ -1,14 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import classes from "./Timer.module.css";
 
 const Timer = (props) => {
+  const [isTimerActive, setIsTimerActive] = useState(false);
+
   useEffect(() => {
-    if (props.target !== 0) {
+    if (props.target !== 0 && !isTimerActive) {
+      setIsTimerActive(true);
       setTimeout(() => {
         props.onTimeout();
+        setIsTimerActive(false);
       }, props.target * 1000);
     }
-  }, [props]);
+  }, [props, isTimerActive]);
 
   let style;
 

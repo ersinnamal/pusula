@@ -10,7 +10,6 @@ const host =
 
 const Pusula = () => {
   const [selected, setSelected] = useState(null);
-  const [isActive, setIsActive] = useState(true);
   const [status, setStatus] = useState();
   const [adays, setAdays] = useState();
   const [data, setData] = useState(false);
@@ -18,11 +17,12 @@ const Pusula = () => {
 
   const resetPusula = useCallback(() => {
     setSelected(null);
-    setIsActive(false);
+    setStatus("ended");
   }, []);
 
   useEffect(() => {
-    if (isActive && data) return setAdays(data.adays);
+    console.log(status, data);
+    if (status === "active" && data) return setAdays(data.adays);
     if (status === "results") return;
 
     const fetchPusula = async () => {
@@ -32,28 +32,24 @@ const Pusula = () => {
 
       if (isFirstTime) {
         setStatus("active");
-        setIsActive(true);
         setAdays(body.adays);
         setIsFirstTime(false);
         return;
       }
 
-      setAdays(body.prev.adays);
-      setStatus("results");
-      setTimeout(
-        () => {
-          setIsActive(true);
-          setStatus("active");
-        },
-        data ? 3000 : 0
-      );
+      if (status === "ended") {
+        setAdays(body.prev.adays);
+        setStatus("results");
+        setTimeout(
+          () => {
+            setStatus("active");
+          },
+          data ? 3000 : 0
+        );
+      }
     };
     fetchPusula();
-  }, [isActive, data, status, isFirstTime]);
-
-  const handleTimeout = useCallback(() => {
-    resetPusula();
-  }, [resetPusula]);
+  }, [data, status, isFirstTime]);
 
   useEffect(() => {
     const sendVote = async () => {
@@ -69,9 +65,11 @@ const Pusula = () => {
   return (
     <Container>
       <Timer
-        status={isActive && data ? "start" : "pause"}
-        target={isActive && data ? Math.ceil(data.remainingTime / 1000) : 0}
-        onTimeout={handleTimeout}
+        status={status === "active" && data ? "start" : "pause"}
+        target={
+          status === "active" && data ? Math.ceil(data.remainingTime / 1000) : 0
+        }
+        onTimeout={resetPusula}
       />
       <div className={classes.pusula}>
         {[0, 1].map((i) => (
