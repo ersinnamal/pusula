@@ -32,7 +32,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  /* color: var(--gra); */
   background-color: var(--gray-1);
 }
 

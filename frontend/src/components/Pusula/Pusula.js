@@ -78,7 +78,9 @@ const Pusula = () => {
           <>
             <Aday
               key={i}
-              vote={!isActive && data.prev ? data.prev.votes[i] : null}
+              vote={
+                status === "results" && data.prev ? data.prev.votes[i] : null
+              }
               selected={selected === i}
               disabled={selected !== null}
               data={data && adays[i]}
