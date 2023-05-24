@@ -5,14 +5,16 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--gray-0);
-  box-shadow: 0 0 10px 3px #49505733;
+  box-shadow: 0 0 10px 3px var(--gray-3);
   border-radius: 7px;
   overflow: hidden;
 }
 
 @media (max-width: 400px) {
   .container {
-    margin: 2rem auto;
-    width: 95%;
+    margin: 0;
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 5px 5px 0px var(--gray-3);
   }
 }

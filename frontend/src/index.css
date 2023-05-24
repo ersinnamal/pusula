@@ -32,7 +32,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: var(--gray-3);
+  /* color: var(--gra); */
+  background-color: var(--gray-1);
 }
 
 @media (max-width: 400px) {
