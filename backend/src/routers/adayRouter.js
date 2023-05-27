@@ -1,8 +1,8 @@
 const express = require("express");
-const { createAday } = require("../controllers/adayController");
+const { createAday, getAdays } = require("../controllers/adayController");
 
 const adayRouter = express.Router();
 
-adayRouter.route("/").post(createAday);
+adayRouter.route("/").post(createAday).get(getAdays);
 
 module.exports = adayRouter;
