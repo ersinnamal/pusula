@@ -1,5 +1,6 @@
 .container {
-  margin: 5rem auto 0rem auto;
+  margin-top: 5rem;
+  /* padding: 1.2rem; */
   width: fit-content;
   display: flex;
   flex-direction: column;

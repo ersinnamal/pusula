@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 4px 1px var(--gray-3);
+  overflow: hidden;
+  transition: all 300ms;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 4px 1px var(--gray-4);
+}
+
+.adayImgContainer {
+  overflow: hidden;
+}
+
+.adayImg {
+  display: block;
+  width: 7rem;
+  height: 9rem;
+  object-fit: cover;
+  transition: all 500ms;
+}
+
+.adayImg:hover {
+  transform: scale(110%);
+}
+
+.textContainer {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 2rem;
+}
+
+.textContainer p {
+  font-weight: 700;
+  color: var(--gray-9);
+}

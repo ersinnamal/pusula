@@ -35,6 +35,17 @@ body {
   background-color: var(--gray-1);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* align-items: ; */
+}
+
+input {
+  font-size: 1.6rem;
+}
+
 @media (max-width: 400px) {
   body {
     font-size: 1.4rem;

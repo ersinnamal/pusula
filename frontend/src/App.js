@@ -8,10 +8,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Pusula />} />
-        <Route path="/aday-ekle" element={<AdayEkle />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Pusula />} />
+          <Route path="/aday-ekle" element={<AdayEkle />} />
+        </Routes>
+      </main>
       <Share />
     </div>
   );

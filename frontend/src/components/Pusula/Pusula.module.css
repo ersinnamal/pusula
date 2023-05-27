@@ -1,18 +1,5 @@
-/* .container {
-  margin: 5rem auto;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--gray-0);
-  box-shadow: 0 0 10px 3px #49505733;
-  border-radius: 7px;
-  overflow: hidden;
-} */
-
 .pusula {
   margin: auto;
-  /* border: 1px solid #495057; */
   width: fit-content;
   padding: 3.6rem;
   display: flex;

@@ -21,7 +21,6 @@ const Pusula = () => {
   }, []);
 
   useEffect(() => {
-    console.log(status, data);
     if (status === "active" && data) return setAdays(data.adays);
     if (status === "results") return;
 
