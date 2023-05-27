@@ -1,5 +1,5 @@
 .container {
-  margin: 5rem auto;
+  margin: 5rem auto 0rem auto;
   width: fit-content;
   display: flex;
   flex-direction: column;
