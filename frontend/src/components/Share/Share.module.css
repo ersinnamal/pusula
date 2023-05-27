@@ -1,0 +1,26 @@
+.shareContainer {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.shareContainer p {
+  color: var(--gray-8);
+}
+
+.shareButtons {
+  display: flex;
+  gap: 1.4rem;
+  justify-content: center;
+}
+
+.shareButtons button {
+  filter: grayscale(100%);
+  transition: all 500ms;
+}
+
+.shareButtons button:hover {
+  filter: grayscale(30%);
+}
