@@ -22,7 +22,6 @@ const Aday = (props) => {
       <div
         className={`${classes.container} ${isBlurred ? classes.blurred : ""}`}
       >
-        {/* <Line vertical={true} /> */}
         <div className={classes.adayContainer}>
           <div className={classes.imgContainer}>
             <div
@@ -62,7 +61,6 @@ const Aday = (props) => {
           </button>
           <Line vertical={false} />
         </div>
-        {/* <Line vertical={true} /> */}
       </div>
     </>
   );
