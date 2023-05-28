@@ -8,18 +8,21 @@
 .submitButton {
   margin-top: 1.8rem;
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--gray-7);
   border-radius: 3px;
   font-weight: bold;
-  color: #505050;
-  background-color: rgb(243, 243, 243);
+  color: var(--gray-7);
+  background-color: var(--gray-1);
   transition: all 100ms;
+  box-shadow: 0px 0px 3px 1px var(--gray-3);
 }
 
 .submitButton:hover,
 .submitButton:disabled {
-  background-color: #bebebe;
-  color: black;
+  background-color: var(--gray-3);
+  color: var(--gray-9);
+  border-color: var(--gray-8);
+  box-shadow: 0px 0px 6px 1px var(--gray-4);
 }
 
 @media (max-width: 400px) {
